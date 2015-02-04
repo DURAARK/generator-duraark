@@ -13,50 +13,52 @@ module.exports = yeoman.generators.Base.extend({
 
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the super-excellent' + chalk.red('Duraark') + ' generator!'
+      'Welcome to the super-excellent' + chalk.green('DURAARK') + ' generator.'
     ));
 
-    var prompts = [{
-      type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
-      default: true
-    }];
+    this.log('Create a new directory and execute "yo duraark:service $NAME" to setup a SailsJS based microservice there!\n');
 
-    this.prompt(prompts, function (props) {
-      this.someOption = props.someOption;
+    // var prompts = [{
+    //   type: 'confirm',
+    //   name: 'someOption',
+    //   message: 'Would you like to enable this option?',
+    //   default: true
+    // }];
 
-      done();
-    }.bind(this));
+    // this.prompt(prompts, function (props) {
+    //   this.someOption = props.someOption;
+
+    //   done();
+    // }.bind(this));
   },
 
-  writing: {
-    app: function () {
-      this.fs.copy(
-        this.templatePath('_package.json'),
-        this.destinationPath('package.json')
-      );
-      this.fs.copy(
-        this.templatePath('_bower.json'),
-        this.destinationPath('bower.json')
-      );
-    },
+  // writing: {
+  //   app: function () {
+  //     this.fs.copy(
+  //       this.templatePath('_package.json'),
+  //       this.destinationPath('package.json')
+  //     );
+  //     this.fs.copy(
+  //       this.templatePath('_bower.json'),
+  //       this.destinationPath('bower.json')
+  //     );
+  //   },
 
-    projectfiles: function () {
-      this.fs.copy(
-        this.templatePath('editorconfig'),
-        this.destinationPath('.editorconfig')
-      );
-      this.fs.copy(
-        this.templatePath('jshintrc'),
-        this.destinationPath('.jshintrc')
-      );
-    }
-  },
+  //   projectfiles: function () {
+  //     this.fs.copy(
+  //       this.templatePath('editorconfig'),
+  //       this.destinationPath('.editorconfig')
+  //     );
+  //     this.fs.copy(
+  //       this.templatePath('jshintrc'),
+  //       this.destinationPath('.jshintrc')
+  //     );
+  //   }
+  // },
 
-  install: function () {
-    this.installDependencies({
-      skipInstall: this.options['skip-install']
-    });
-  }
+  // install: function () {
+  //   this.installDependencies({
+  //     skipInstall: this.options['skip-install']
+  //   });
+  // }
 });
