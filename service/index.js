@@ -54,17 +54,17 @@ module.exports = yeoman.generators.NamedBase.extend({
                 path.join(serviceBaseRoot, 'Dockerfile'),
                 path.join(this.bootstrapRoot, 'Dockerfile')
             );
+        },
+
+        setupDevelopment: function() {
+            var developmentTarget = this.bootstrapRoot + '/scripts';
+
+            console.log('Configuring development scripts ...');
+
+            var serviceInfoPath = path.join(developmentTarget, 'service-info.txt');
+
+            this.write(serviceInfoPath, this.name);
         }
-
-          setupDevelopment: function() {
-              var developmentTarget = this.bootstrapRoot + '/scripts';
-
-              console.log('Configuring development scripts ...');
-
-              var serviceInfoPath = path.join(developmentTarget, 'service-info.txt');
-
-              this.write(serviceInfoPath, this.name);
-          }
     },
 
     install: function() {
