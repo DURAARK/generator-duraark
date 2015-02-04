@@ -1,0 +1,6 @@
+language: node_js
+node_js:
+  - '0.10'
+before_install:
+  - currentfolder=${PWD##*/}
+  - if [ "$currentfolder" != 'generator-duraark' ]; then cd .. && eval "mv $currentfolder generator-duraark" && cd generator-duraark; fi
