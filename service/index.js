@@ -62,5 +62,11 @@ module.exports = yeoman.generators.NamedBase.extend({
 
             this.write(serviceInfoPath, this.name);
         }
+    },
+
+    install: function() {
+        this.installDependencies({
+            skipInstall: this.options['skip-install']
+        });
     }
 });
