@@ -1,6 +1,6 @@
 {
   "name": "generator-duraark",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "CLI for developing duraark services and UIs",
   "license": "MIT",
   "main": "app/index.js",
