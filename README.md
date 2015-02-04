@@ -8,7 +8,7 @@ The CLI is based on [Yeoman](http://yeoman.io).
 
 ## Usage
 
-1. Install [Yeoman](http://yeoman.io): npm install -g yeoman
+1. Install [Yeoman](http://yeoman.io): npm install -g yo
 2. Install the generator: npm install -g generator-duraark
 3. Create a new directory to host the service and change into it
 4. Execute 'yo duraark:service $NAME', where $NAME is your service name
