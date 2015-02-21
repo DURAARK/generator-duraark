@@ -1,6 +1,6 @@
 {
   "name": "generator-duraark",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "CLI for developing duraark services and UIs",
   "license": "MIT",
   "main": "app/index.js",
@@ -27,7 +27,7 @@
     "yeoman-generator": "^0.18.0",
     "chalk": "^0.5.0",
     "yosay": "^0.3.0",
-    "duraark-microservice-base": "^0.2.3"
+    "duraark-microservice-base": "0.2.3"
   },
   "devDependencies": {
     "mocha": "*"
