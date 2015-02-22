@@ -1,14 +1,14 @@
 {
   "name": "generator-duraark",
-  "version": "0.1.6",
-  "description": "CLI for developing duraark services and UIs",
+  "version": "0.1.7",
+  "description": "CLI for scaffolding develop- and deployment environments for docker-enabled REST microservices.",
   "license": "MIT",
   "main": "app/index.js",
   "repository": "duraark/generator-duraark",
   "author": {
     "name": "Martin Hecher",
     "email": "martin.hecher@fraunhofer.at",
-    "url": "https://github.com/duraark"
+    "url": "https://github.com/DURAARK"
   },
   "engines": {
     "node": ">=0.10.0"
@@ -27,7 +27,7 @@
     "yeoman-generator": "^0.18.0",
     "chalk": "^0.5.0",
     "yosay": "^0.3.0",
-    "duraark-microservice-base": "0.2.3"
+    "duraark-microservice-base": "0.2.5"
   },
   "devDependencies": {
     "mocha": "*"

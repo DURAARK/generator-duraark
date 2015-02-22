@@ -17,7 +17,7 @@ module.exports = yeoman.generators.NamedBase.extend({
 
     writing: {
         copyTemplateFiles: function() {
-            var templateRoot = path.join(__dirname, '..', 'node_modules', 'duraark-microservice-base', 'src') + '/**';
+            var templateRoot = path.join(__dirname, '..', 'node_modules', 'duraark-microservice-base') + '/**';
 
             console.log('Copying template files from "' + templateRoot + '" to "' + this.bootstrapRoot + '"');
 
@@ -32,36 +32,9 @@ module.exports = yeoman.generators.NamedBase.extend({
                 serviceBaseRoot = path.join(__dirname, '..', 'node_modules', 'duraark-microservice-base'),
                 deploymentScriptsRoot = path.join(__dirname, '..', 'node_modules', 'duraark-microservice-base', 'deployment') + '/**';
 
-            console.log('Copying deployment scripts from "' + deploymentScriptsRoot + '" to "' + deploymentTarget + '"');
-
-            this.fs.copy(
-                deploymentScriptsRoot,
-                deploymentTarget
-            );
-
             var serviceInfoPath = path.join(deploymentTarget, 'service-info.txt');
 
             console.log('Configuring deployment scripts ...');
-
-            this.write(serviceInfoPath, this.name);
-
-            console.log('Copying Dockerfile ...');
-
-            console.log('serviceBaseRoot: ' + path.join(serviceBaseRoot, 'Dockerfile'));
-            console.log('this.bootstrapRoot: ' + this.bootstrapRoot);
-
-            this.fs.copy(
-                path.join(serviceBaseRoot, 'Dockerfile'),
-                path.join(this.bootstrapRoot, 'Dockerfile')
-            );
-        },
-
-        setupDevelopment: function() {
-            var developmentTarget = this.bootstrapRoot + '/scripts';
-
-            console.log('Configuring development scripts ...');
-
-            var serviceInfoPath = path.join(developmentTarget, 'service-info.txt');
 
             this.write(serviceInfoPath, this.name);
         }
