@@ -16,8 +16,8 @@ We are happy to discuss new features and enhancements. Feel free to drop us a no
 
 4. Execute 'yo duraark:service $NAME', where $NAME is your service name
 
-5. The directory is populated with the necessary files. See the 'scripts' folder for the development scripts and the 'deployment' folder for scripts to deploy the service with docker.
+5. The directory is populated with the necessary files. See the '_devops_' folder for the development and deployment helper scripts. A documentation for those scripts can be found at [microservice-base](https://github.com/DURAARK/microservice-base).
 
-This is the first public version of the CLI. Documentation and functionality will be extended over the next months within the [DURAARK project](http://duraark.eu).
+This is an early but usable version of the CLI. Documentation and functionality will be extended over the next months within the [DURAARK project](http://duraark.eu).
 
 Enjoy!

@@ -1,6 +1,6 @@
 {
   "name": "generator-duraark",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "CLI for scaffolding develop- and deployment environments for docker-enabled REST microservices.",
   "license": "MIT",
   "main": "app/index.js",
